@@ -1,0 +1,30 @@
+{
+  "name": "exact-trie",
+  "version": "1.0.0",
+  "description": "Trie and radix tree implementation tailored towards exact matches.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimboKZ/exact-trie.git"
+  },
+  "keywords": [
+    "trie",
+    "prefix-tree",
+    "radix-tree",
+    "comparison",
+    "string-search"
+  ],
+  "author": {
+    "name": "Timur Kuzhagaliyev",
+    "email": "tim.kuzh@gmail.com",
+    "url": "https://foxypanda.me/"
+  },
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/TimboKZ/exact-trie/issues"
+  },
+  "homepage": "https://github.com/TimboKZ/exact-trie#readme"
+}
