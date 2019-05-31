@@ -30,7 +30,14 @@ matches, `undefined` is returned.
 * `string` string to check for prefixes, must be a string.
 * `checkpointChar` (`null`, optional) character used to separate potential prefixes. When set to `null`, every possible
 prefix is considered.
-* `reverse` (`false`, optional) set to `true` to reverse the key before searching.
+* `reverse` (`false`, optional) set to `true` to reverse the string before searching.
+
+#### `trie.hasWithCheckpoints(string, [checkpointChar], [reverse])`
+Used to check if any key matches relevant prefixes from `string`. Returns a boolean
+* `string` string to check for prefixes, must be a string.
+* `checkpointChar` (`null`, optional) character used to separate potential prefixes. When set to `null`, every possible
+prefix is considered.
+* `reverse` (`false`, optional) set to `true` to reverse the string before searching.
 
 # Example
 
