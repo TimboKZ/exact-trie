@@ -9,9 +9,15 @@ Used to create the trie: `const trie = new ExactTrie();`.
     * `ignoreCase` (`true`, optional) set to `true` to convert all keys to lower case.
 
 #### `trie.put(key, value, [reverse])`
-Used to insert elements into the trie.
+Used to insert single element into the trie.
 * `key` search key, must be a string.
 * `value` value to be inserted, can by any type.
+* `reverse` (`false`, optional) set to `true` to reverse the key before inserting.
+
+#### `trie.putAll(keys, values, [reverse])`
+Used to insert multiple elements into the trie.
+* `keys` search keys, must be an array of strings.
+* `values` values to be inserted, can be an array of values of any type or a single value. If an array is provided, each key from `keys` will be assigned a corresponding value from `values`. Otherwise all keys will receive the same value.
 * `reverse` (`false`, optional) set to `true` to reverse the key before inserting.
 
 #### `trie.get(key, [reverse])`
