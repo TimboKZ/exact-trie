@@ -10,6 +10,14 @@ console.log(trie.get('life')); // prints `32`
 console.log(trie.has('lif'));  // prints `false`
 console.log(trie.get('lif'));  // prints `undefined`
 
+// Chaining and multiple values
+trie
+    .putAll(['a', 'b'], [1, 2])
+    .putAll(['c', 'd'], 34)
+    .put('e', 5);
+console.log(trie.getAll(['a', 'b', 'c', 'd', 'e', 'f']));
+// -> prints `[1, 2, 34, 34, 5, undefined]`
+
 // Various values and overwriting
 const world = {response: 'world'};
 trie.put('hello', world);
@@ -26,8 +34,10 @@ console.log(trie.has('oxygen', true)); // prints `true`
 // Matching with checkpoints
 trie.put('tim', 'Name is Tim');
 trie.put('tim.kuzh', 'Tim Kuzh is the name');
-console.log(trie.getWithCheckpoints('tim.kuzh', '.')); // prints `Tim Kuzh is the name`
-console.log(trie.getWithCheckpoints('tim.cook', '.')); // prints `Name is Tim`
+console.log(trie.getWithCheckpoints('tim.kuzh', '.'));
+// -> prints `Tim Kuzh is the name`
+console.log(trie.getWithCheckpoints('tim.cook', '.'));
+// -> prints `Name is Tim`
 
 // Matching file extensions
 trie.put('tar.gz', 'archive', true);

@@ -9,13 +9,13 @@ Used to create the trie: `const trie = new ExactTrie();`.
     * `ignoreCase` (`true`, optional) set to `true` to convert all keys to lower case.
 
 #### `trie.put(key, value, [reverse])`
-Used to insert single element into the trie.
+Used to insert single element into the trie. Returns the same instance of `ExactTrie` to allow chaining.
 * `key` search key, must be a string.
 * `value` value to be inserted, can by any type.
 * `reverse` (`false`, optional) set to `true` to reverse the key before inserting.
 
 #### `trie.putAll(keys, values, [reverse])`
-Used to insert multiple elements into the trie.
+Used to insert multiple elements into the trie. Returns the same instance of `ExactTrie` to allow chaining.
 * `keys` search keys, must be an array of strings.
 * `values` values to be inserted, can be an array of values of any type or a single value. If an array is provided, each key from `keys` will be assigned a corresponding value from `values`. Otherwise all keys will receive the same value.
 * `reverse` (`false`, optional) set to `true` to reverse the key before inserting.
@@ -25,10 +25,16 @@ Used to retrieve elements from the trie. Returns `undefined` if the key is not p
 * `key` search key, must be a string.
 * `reverse` (`false`, optional) set to `true` to reverse the key before searching.
 
+#### `trie.getAll(keys, [reverse])`
+Same as `get(...)`, except this function takes an array of keys and returns an array of values.
+
 #### `trie.has(key, [reverse])`
 Used to check if the key is present in the true. Returns a boolean.
 * `key` search key, must be a string.
 * `reverse` (`false`, optional) set to `true` to reverse the key before searching.
+
+#### `trie.hasAll(keys, [reverse])`
+Same as `has(...)`, except this function takes an array of keys and returns an array of booleans.
 
 #### `trie.getWithCheckpoints(string, [checkpointChar], [reverse])`
 Used to retrieve the value corresponding to they key that matches the longest prefix of `string`. If there are no
@@ -38,12 +44,18 @@ matches, `undefined` is returned.
 prefix is considered.
 * `reverse` (`false`, optional) set to `true` to reverse the string before searching.
 
+#### `trie.getAllWithCheckpoints(keys, [checkpointChar], [reverse])`
+Same as `getWithCheckpoints(...)`, except this function takes an array of keys and returns an array of values.
+
 #### `trie.hasWithCheckpoints(string, [checkpointChar], [reverse])`
 Used to check if any key matches relevant prefixes from `string`. Returns a boolean
 * `string` string to check for prefixes, must be a string.
 * `checkpointChar` (`null`, optional) character used to separate potential prefixes. When set to `null`, every possible
 prefix is considered.
 * `reverse` (`false`, optional) set to `true` to reverse the string before searching.
+
+#### `trie.hasAllWithCheckpoints(keys, [checkpointChar], [reverse])`
+Same as `hasWithCheckpoints(...)`, except this function takes an array of keys and returns an array of booleans.
 
 # Example
 
