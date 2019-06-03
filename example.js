@@ -10,7 +10,7 @@ console.log(trie.get('life')); // prints `32`
 console.log(trie.has('lif'));  // prints `false`
 console.log(trie.get('lif'));  // prints `undefined`
 
-// Chaining and multiple values
+// Multiple values with changing
 trie
     .putAll(['a', 'b'], [1, 2])
     .putAll(['c', 'd'], 34)
