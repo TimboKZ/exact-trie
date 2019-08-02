@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/TimboKZ/exact-trie/issues"
   },
-  "homepage": "https://github.com/TimboKZ/exact-trie#readme"
+  "homepage": "https://github.com/TimboKZ/exact-trie#readme",
+  "devDependencies": {
+    "tsd-jsdoc": "^2.3.1"
+  }
 }
