@@ -1,6 +1,6 @@
 {
   "name": "exact-trie",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Trie and radix tree implementation tailored towards exact matches.",
   "main": "index.js",
   "typings": "index.d.ts",
